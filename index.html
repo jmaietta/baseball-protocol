@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#071523" />
+  <meta name="description" content="A baseball-specific nutrition and resistance-training protocol for a 21-year-old, 6-foot, 210-pound college baseball player preparing for the 2027 spring season." />
+  <title>2026–27 Baseball Lean-Mass Protocol</title>
+  <style>
+    :root {
+      --navy-950: #06111d;
+      --navy-900: #0a1d30;
+      --navy-800: #102a44;
+      --navy-700: #173b5e;
+      --red-600: #c73a42;
+      --red-500: #dd4b53;
+      --gold-500: #e0a83c;
+      --blue-100: #e9f1f8;
+      --ink: #14202b;
+      --muted: #617080;
+      --line: #dbe3ea;
+      --paper: #f5f7f9;
+      --white: #ffffff;
+      --green: #247a57;
+      --shadow: 0 14px 34px rgba(7, 21, 35, .10);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    button { font: inherit; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 8px;
+      z-index: 1000;
+      padding: 10px 14px;
+      color: #fff;
+      background: var(--red-600);
+      border-radius: 8px;
+    }
+    .skip-link:focus { left: 8px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background:
+        radial-gradient(circle at 90% 5%, rgba(224, 168, 60, .22), transparent 24%),
+        radial-gradient(circle at 8% 95%, rgba(221, 75, 83, .24), transparent 26%),
+        linear-gradient(135deg, var(--navy-950), var(--navy-800));
+      padding: 34px 20px 40px;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -7% -145px auto;
+      width: 360px;
+      height: 360px;
+      border: 2px solid rgba(255,255,255,.07);
+      border-radius: 50%;
+      box-shadow: 0 0 0 28px rgba(255,255,255,.03), 0 0 0 60px rgba(255,255,255,.02);
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red-500);
+      box-shadow: 0 0 0 4px rgba(221,75,83,.18);
+    }
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(2.15rem, 7vw, 4.9rem);
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+    .hero-lead {
+      max-width: 780px;
+      margin: 18px 0 0;
+      color: #dce7f1;
+      font-size: clamp(1rem, 2.4vw, 1.22rem);
+    }
+    .player-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 850px;
+      margin-top: 25px;
+    }
+    .player-stat {
+      padding: 13px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      background: rgba(255,255,255,.065);
+      backdrop-filter: blur(8px);
+    }
+    .player-stat span {
+      display: block;
+      color: #adc1d3;
+      font-size: .73rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .player-stat strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 1.05rem;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      z-index: 50;
+      top: 0;
+      border-bottom: 1px solid rgba(219,227,234,.9);
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 9px 14px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a {
+      flex: 0 0 auto;
+      padding: 8px 11px;
+      color: #415163;
+      border-radius: 9px;
+      text-decoration: none;
+      font-size: .84rem;
+      font-weight: 750;
+    }
+    .nav a:hover, .nav a:focus-visible {
+      color: var(--navy-900);
+      background: var(--blue-100);
+      outline: none;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 18px 70px;
+    }
+    section {
+      scroll-margin-top: 75px;
+      margin-top: 42px;
+    }
+    section:first-child { margin-top: 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 17px;
+    }
+    .section-kicker {
+      margin: 0 0 3px;
+      color: var(--red-600);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    h2 {
+      margin: 0;
+      color: var(--navy-900);
+      font-size: clamp(1.55rem, 4vw, 2.3rem);
+      line-height: 1.08;
+      letter-spacing: -.025em;
+    }
+    h3 {
+      margin: 0 0 8px;
+      color: var(--navy-900);
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+    p { margin: 0 0 13px; }
+    .muted { color: var(--muted); }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .pad { padding: 22px; }
+
+    .notice {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid #f1d8a4;
+      border-radius: 16px;
+      background: #fff8e8;
+      box-shadow: none;
+    }
+    .notice-icon {
+      display: grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      color: #fff;
+      border-radius: 50%;
+      background: var(--gold-500);
+      font-weight: 900;
+    }
+    .notice strong { color: #674707; }
+
+    .goal-grid,
+    .macro-grid,
+    .metric-grid,
+    .recovery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 13px;
+    }
+    .goal-card,
+    .macro-card,
+    .metric-card,
+    .recovery-card {
+      min-height: 130px;
+      padding: 19px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+    .goal-card .label,
+    .macro-card .label,
+    .metric-card .label,
+    .recovery-card .label {
+      color: var(--muted);
+      font-size: .73rem;
+      font-weight: 850;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .goal-card strong,
+    .macro-card strong,
+    .metric-card strong,
+    .recovery-card strong {
+      display: block;
+      margin-top: 7px;
+      color: var(--navy-900);
+      font-size: 1.5rem;
+      line-height: 1.05;
+    }
+    .goal-card small,
+    .macro-card small,
+    .metric-card small,
+    .recovery-card small {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 11px;
+    }
+    .phase {
+      position: relative;
+      overflow: hidden;
+      min-height: 205px;
+      padding: 19px 17px 17px;
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: #fff;
+    }
+    .phase::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 5px;
+      background: var(--navy-700);
+    }
+    .phase:nth-child(2)::before { background: var(--red-600); }
+    .phase:nth-child(3)::before { background: var(--gold-500); }
+    .phase:nth-child(4)::before { background: var(--green); }
+    .phase:nth-child(5)::before { background: #6551a8; }
+    .phase-num {
+      display: inline-grid;
+      place-items: center;
+      width: 29px;
+      height: 29px;
+      margin-bottom: 11px;
+      color: #fff;
+      border-radius: 50%;
+      background: var(--navy-900);
+      font-size: .8rem;
+      font-weight: 900;
+    }
+    .phase-date {
+      color: var(--red-600);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .phase p { color: var(--muted); font-size: .91rem; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fff;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+    }
+    th, td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: #fff;
+      background: var(--navy-800);
+      font-size: .77rem;
+      letter-spacing: .055em;
+      text-transform: uppercase;
+    }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) td { background: #f8fafc; }
+
+    .checklist {
+      display: grid;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .checklist li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+    .checklist li::before {
+      content: "✓";
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      color: #fff;
+      border-radius: 50%;
+      background: var(--green);
+      font-size: .76rem;
+      font-weight: 900;
+    }
+
+    .day-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+    details.workout {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(7,21,35,.06);
+    }
+    details.workout[open] { border-color: #bdcbd8; }
+    details.workout summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 17px 18px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 850;
+      color: var(--navy-900);
+    }
+    details.workout summary::-webkit-details-marker { display: none; }
+    details.workout summary::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--blue-100);
+      font-size: 1.2rem;
+    }
+    details.workout[open] summary::after { content: "−"; }
+    .workout-body { padding: 0 18px 18px; }
+    .exercise-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 11px 0;
+      border-top: 1px solid var(--line);
+    }
+    .exercise-row span:last-child {
+      color: var(--red-600);
+      font-weight: 850;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .meal-stack {
+      display: grid;
+      gap: 11px;
+    }
+    .meal {
+      display: grid;
+      grid-template-columns: 104px 1fr;
+      gap: 13px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    .meal time {
+      color: var(--red-600);
+      font-weight: 850;
+    }
+    .meal p { margin: 0; color: #415163; }
+
+    .rule-list {
+      display: grid;
+      gap: 10px;
+    }
+    .rule {
+      display: grid;
+      grid-template-columns: minmax(170px, .85fr) 1.15fr;
+      gap: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: #fff;
+    }
+    .rule strong { color: var(--navy-900); }
+    .rule span:last-child { color: var(--muted); }
+
+    .callout {
+      padding: 22px;
+      color: #fff;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-700));
+      box-shadow: var(--shadow);
+    }
+    .callout h3 { color: #fff; }
+    .callout p { color: #d5e1eb; }
+    .callout strong { color: #fff; }
+
+    .sources {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+    .sources ol { margin: 10px 0 0 20px; padding: 0; }
+    .sources li { margin-bottom: 10px; color: var(--muted); }
+    .sources a { color: var(--navy-700); font-weight: 700; }
+
+    .footer {
+      padding: 30px 18px 45px;
+      color: #aebdca;
+      background: var(--navy-950);
+      text-align: center;
+      font-size: .86rem;
+    }
+    .footer strong { color: #fff; }
+
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      color: #fff;
+      border: 0;
+      border-radius: 10px;
+      background: var(--red-600);
+      cursor: pointer;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(199,58,66,.22);
+    }
+    .print-btn:hover { background: #ab2d35; }
+
+    @media (max-width: 930px) {
+      .player-strip,
+      .goal-grid,
+      .macro-grid,
+      .metric-grid,
+      .recovery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .phase:last-child { grid-column: 1 / -1; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 650px) {
+      .hero { padding: 26px 16px 31px; }
+      .player-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      main { padding-inline: 13px; }
+      .section-head { align-items: start; }
+      .print-btn { display: none; }
+      .goal-grid,
+      .macro-grid,
+      .metric-grid,
+      .recovery-grid,
+      .timeline,
+      .day-grid { grid-template-columns: 1fr; }
+      .phase:last-child { grid-column: auto; }
+      .goal-card,
+      .macro-card,
+      .metric-card,
+      .recovery-card { min-height: auto; }
+      .meal { grid-template-columns: 1fr; gap: 4px; }
+      .rule { grid-template-columns: 1fr; gap: 4px; }
+      .exercise-row { grid-template-columns: 1fr; gap: 2px; }
+      .exercise-row span:last-child { text-align: left; }
+      h1 { max-width: 14ch; }
+      .pad { padding: 18px; }
+    }
+
+    @media print {
+      :root { --shadow: none; }
+      body { background: #fff; font-size: 10.5pt; }
+      .hero { padding: 22px 0; background: var(--navy-900) !important; }
+      .nav-wrap, .print-btn { display: none !important; }
+      main { max-width: none; padding: 12px 0; }
+      section { margin-top: 24px; break-inside: avoid; }
+      .card, .goal-card, .macro-card, .metric-card, .recovery-card,
+      .phase, details.workout, .table-wrap, .sources { box-shadow: none; }
+      details.workout > * { display: block !important; }
+      details.workout summary::after { display: none; }
+      .day-grid, .timeline { grid-template-columns: repeat(2, 1fr); }
+      a { text-decoration: none; }
+      .footer { padding: 18px 0; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to protocol</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> 2026–27 Off-Season Plan</div>
+      <h1>Build muscle. Keep speed. Be ready for spring.</h1>
+      <p class="hero-lead">A baseball-specific lean-mass protocol designed to add useful strength and muscle without turning an explosive athlete into a slower, heavier one.</p>
+      <div class="player-strip" aria-label="Player profile">
+        <div class="player-stat"><span>Age</span><strong>21</strong></div>
+        <div class="player-stat"><span>Height</span><strong>6′0″</strong></div>
+        <div class="player-stat"><span>Starting weight</span><strong>210 lb</strong></div>
+        <div class="player-stat"><span>Spring target</span><strong>215–218 lb*</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-wrap">
+    <nav class="nav" aria-label="Page sections">
+      <a href="#overview">Overview</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#nutrition">Nutrition</a>
+      <a href="#training">Training</a>
+      <a href="#progression">Progression</a>
+      <a href="#recovery">Recovery</a>
+      <a href="#supplements">Supplements</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section id="overview">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">The assignment</p>
+          <h2>Add useful mass—not just scale weight</h2>
+        </div>
+        <button class="print-btn" type="button" onclick="window.print()" aria-label="Print or save this protocol as a PDF">Print / Save PDF</button>
+      </div>
+
+      <div class="notice card">
+        <div class="notice-icon">!</div>
+        <div>
+          <strong>Coordinate this plan with the college staff.</strong>
+          <p class="muted">The team strength coach, athletic trainer, throwing coach and sports dietitian have final authority. Existing injuries, the fall baseball schedule, position, throwing volume and team programming may require changes.</p>
+        </div>
+      </div>
+
+      <div class="goal-grid" style="margin-top: 15px;">
+        <article class="goal-card">
+          <span class="label">Rate of gain</span>
+          <strong>0.25–0.50 lb</strong>
+          <small>Per week. Faster is not automatically better.</small>
+        </article>
+        <article class="goal-card">
+          <span class="label">Total gain</span>
+          <strong>5–8 lb</strong>
+          <small>Subject to waist, speed, power and body composition.</small>
+        </article>
+        <article class="goal-card">
+          <span class="label">Primary KPI</span>
+          <strong>Performance</strong>
+          <small>Strength, 10-yard speed, broad jump and arm recovery.</small>
+        </article>
+        <article class="goal-card">
+          <span class="label">Red flag</span>
+          <strong>Slower & softer</strong>
+          <small>Stop the surplus if speed falls while the waist climbs.</small>
+        </article>
+      </div>
+    </section>
+
+    <section id="calendar">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Late July to spring</p>
+          <h2>Five-phase development calendar</h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="phase">
+          <div class="phase-num">1</div>
+          <div class="phase-date">July 27–August 9</div>
+          <h3>Baseline & technique</h3>
+          <p>Establish maintenance intake, test movement quality, record performance baselines and learn the lifts without chasing fatigue.</p>
+        </article>
+        <article class="phase">
+          <div class="phase-num">2</div>
+          <div class="phase-date">August 10–October 4</div>
+          <h3>Hypertrophy accumulation</h3>
+          <p>Build muscle with controlled volume, moderate loads and consistent eating. Maintain sprinting, throwing and medicine-ball work.</p>
+        </article>
+        <article class="phase">
+          <div class="phase-num">3</div>
+          <div class="phase-date">October 5–November 29</div>
+          <h3>Strength-hypertrophy</h3>
+          <p>Use heavier sets while retaining enough volume to continue growing. Reduce gym volume if fall baseball activity is substantial.</p>
+        </article>
+        <article class="phase">
+          <div class="phase-num">4</div>
+          <div class="phase-date">November 30–January 24</div>
+          <h3>Maximum strength</h3>
+          <p>Increase force production with low-to-moderate rep work. Do not grind through ugly repetitions or sacrifice throwing quality.</p>
+        </article>
+        <article class="phase">
+          <div class="phase-num">5</div>
+          <div class="phase-date">January 25–first practice</div>
+          <h3>Power & preseason</h3>
+          <p>Cut volume, maintain strength and emphasize speed. End the calorie surplus and arrive fresh, explosive and baseball-ready.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="baseline">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Weeks 1–2</p>
+          <h2>Establish the starting point</h2>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card pad">
+          <h3>Collect these data before changing too much</h3>
+          <ul class="checklist">
+            <li>Morning body weight every day; use the seven-day average.</li>
+            <li>Waist circumference at the navel once each week.</li>
+            <li>Front, side and back photos under consistent conditions.</li>
+            <li>DEXA, Bod Pod or consistent skinfold assessment if available through school.</li>
+            <li>Standing broad jump, 10-yard sprint, chin-ups and selected strength lifts.</li>
+            <li>Three to seven days of normal food intake before imposing a calorie target.</li>
+          </ul>
+        </div>
+        <aside class="callout">
+          <h3>Body-fat composition changes the opening move</h3>
+          <p>If he is already carrying substantial excess body fat, begin near maintenance calories and pursue recomposition for six to eight weeks.</p>
+          <p>If he is reasonably lean, his waist is stable and training quality is good, begin with a modest surplus.</p>
+          <p><strong>Do not guess solely from body weight.</strong></p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="nutrition">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Fuel the work</p>
+          <h2>Nutrition protocol</h2>
+        </div>
+      </div>
+
+      <div class="macro-grid">
+        <article class="macro-card">
+          <span class="label">Training day</span>
+          <strong>3,550–3,700</strong>
+          <small>Starting calories. Adjust using two-week trends.</small>
+        </article>
+        <article class="macro-card">
+          <span class="label">Recovery day</span>
+          <strong>3,250–3,400</strong>
+          <small>Keep protein steady; trim mainly carbohydrate.</small>
+        </article>
+        <article class="macro-card">
+          <span class="label">Double session</span>
+          <strong>3,750–3,950</strong>
+          <small>Add carbohydrate around the extra work.</small>
+        </article>
+        <article class="macro-card">
+          <span class="label">Protein</span>
+          <strong>190–205 g</strong>
+          <small>Spread across four or five feedings.</small>
+        </article>
+      </div>
+
+      <div class="two-col" style="margin-top: 18px;">
+        <div class="card pad">
+          <h3>Daily macronutrient ranges</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Nutrient</th><th>Daily target</th><th>Purpose</th></tr></thead>
+              <tbody>
+                <tr><td>Protein</td><td><strong>190–205 g</strong></td><td>Support repair and muscle growth.</td></tr>
+                <tr><td>Fat</td><td><strong>85–105 g</strong></td><td>Energy, food quality and overall dietary adequacy.</td></tr>
+                <tr><td>Carbohydrate—training</td><td><strong>450–525 g</strong></td><td>Fuel lifting, sprinting, hitting and throwing.</td></tr>
+                <tr><td>Carbohydrate—recovery</td><td><strong>350–425 g</strong></td><td>Maintain recovery while matching lower workload.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted" style="margin-top:12px;">A better individualized method is to determine current maintenance intake and begin approximately 250 calories above it.</p>
+        </div>
+
+        <div class="card pad">
+          <h3>Protein distribution</h3>
+          <div class="table-wrap">
+            <table style="min-width: 0;">
+              <thead><tr><th>Meal</th><th>Protein</th></tr></thead>
+              <tbody>
+                <tr><td>Breakfast</td><td>35–45 g</td></tr>
+                <tr><td>Lunch</td><td>40–50 g</td></tr>
+                <tr><td>Pretraining snack/meal</td><td>25–40 g</td></tr>
+                <tr><td>Post-training dinner</td><td>40–55 g</td></tr>
+                <tr><td>Before bed</td><td>30–40 g</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="muted" style="margin-top:12px;">Eat every three to five hours when practical. Food comes first; shakes are a convenience.</p>
+        </div>
+      </div>
+
+      <div class="card pad" style="margin-top: 18px;">
+        <h3>Training-day meal template</h3>
+        <div class="meal-stack">
+          <div class="meal"><time>Breakfast</time><p>Eggs plus egg whites, oatmeal, berries, banana and milk.</p></div>
+          <div class="meal"><time>Midmorning</time><p>Greek yogurt, granola, fruit and a bagel when additional carbohydrate is needed.</p></div>
+          <div class="meal"><time>Lunch</time><p>Eight ounces of chicken, beef, turkey or fish; two cups cooked rice or pasta; beans; vegetables; olive oil or avocado.</p></div>
+          <div class="meal"><time>Pretraining</time><p>Bagel with turkey, banana and milk—or a comparable meal with 30–40 g protein and 75–125 g carbohydrate.</p></div>
+          <div class="meal"><time>Post-training</time><p>Eight ounces of lean beef, chicken, salmon or pork; a large serving of potatoes, rice or pasta; vegetables and fruit.</p></div>
+          <div class="meal"><time>Before bed</time><p>Cottage cheese or Greek yogurt with cereal, fruit and nuts.</p></div>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top: 18px;">
+        <div class="card pad">
+          <h3>Two to three hours before training</h3>
+          <ul class="checklist">
+            <li>30–40 g protein.</li>
+            <li>75–125 g carbohydrate.</li>
+            <li>Moderate or low fat.</li>
+            <li>Avoid an unusually high-fiber meal immediately before sprinting.</li>
+          </ul>
+        </div>
+        <div class="card pad">
+          <h3>During and after training</h3>
+          <ul class="checklist">
+            <li>Water is normally sufficient for an ordinary lifting session.</li>
+            <li>Add carbohydrate and electrolytes for long, hot or double sessions.</li>
+            <li>Within roughly two hours: 35–50 g protein and 80–125 g carbohydrate.</li>
+            <li>A normal meal is preferable; a shake simply improves convenience.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="training">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Four-day split</p>
+          <h2>Baseball-specific resistance training</h2>
+        </div>
+      </div>
+
+      <div class="table-wrap" style="margin-bottom: 17px;">
+        <table>
+          <thead><tr><th>Day</th><th>Primary work</th><th>Intent</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>Acceleration + Lower A</td><td>Horizontal force, lower-body strength and posterior chain.</td></tr>
+            <tr><td>Tuesday</td><td>Rotational power + Upper A</td><td>Press-pull balance, scapular control and trunk transfer.</td></tr>
+            <tr><td>Wednesday</td><td>Recovery + skill work</td><td>Mobility, easy movement and baseball practice as assigned.</td></tr>
+            <tr><td>Thursday</td><td>Jumps + Lower B</td><td>Vertical power, unilateral strength and frontal-plane capacity.</td></tr>
+            <tr><td>Friday</td><td>Rotational power + Upper B</td><td>Explosive pressing, pulling and shoulder-support work.</td></tr>
+            <tr><td>Saturday</td><td>Skill + short sprints</td><td>Position work and optional easy aerobic recovery.</td></tr>
+            <tr><td>Sunday</td><td>Complete rest</td><td>Physical and neurological recovery.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="day-grid">
+        <details class="workout" open>
+          <summary>Monday — Lower Body A</summary>
+          <div class="workout-body">
+            <div class="exercise-row"><span>10–20-yard acceleration</span><span>6 total sprints</span></div>
+            <div class="exercise-row"><span>Standing broad jump</span><span>4 × 3</span></div>
+            <div class="exercise-row"><span>Trap-bar deadlift</span><span>4 × 5</span></div>
+            <div class="exercise-row"><span>Rear-foot-elevated split squat</span><span>3 × 8 / leg</span></div>
+            <div class="exercise-row"><span>Barbell hip thrust</span><span>3 × 8</span></div>
+            <div class="exercise-row"><span>Seated or lying leg curl</span><span>3 × 10</span></div>
+            <div class="exercise-row"><span>Calf raise</span><span>3 × 10–15</span></div>
+            <div class="exercise-row"><span>Pallof press</span><span>3 × 10 / side</span></div>
+          </div>
+        </details>
+
+        <details class="workout" open>
+          <summary>Tuesday — Upper Body A</summary>
+          <div class="workout-body">
+            <div class="exercise-row"><span>Rotational medicine-ball scoop toss</span><span>4 × 4 / side</span></div>
+            <div class="exercise-row"><span>Neutral-grip dumbbell bench</span><span>4 × 6–8</span></div>
+            <div class="exercise-row"><span>Weighted chin-up or neutral pulldown</span><span>4 × 6–8</span></div>
+            <div class="exercise-row"><span>Half-kneeling one-arm landmine press</span><span>3 × 8 / side</span></div>
+            <div class="exercise-row"><span>Chest-supported row</span><span>3 × 8–10</span></div>
+            <div class="exercise-row"><span>Face pull</span><span>2 × 12–15</span></div>
+            <div class="exercise-row"><span>Cable or band external rotation</span><span>2 × 12–15</span></div>
+            <div class="exercise-row"><span>Farmer carry</span><span>3 × 30 yd</span></div>
+          </div>
+        </details>
+
+        <details class="workout" open>
+          <summary>Thursday — Lower Body B</summary>
+          <div class="workout-body">
+            <div class="exercise-row"><span>Box jump or countermovement jump</span><span>4 × 3</span></div>
+            <div class="exercise-row"><span>Front squat or safety-bar squat</span><span>4 × 6</span></div>
+            <div class="exercise-row"><span>Romanian deadlift</span><span>3 × 6–8</span></div>
+            <div class="exercise-row"><span>Lateral lunge</span><span>3 × 8 / side</span></div>
+            <div class="exercise-row"><span>Nordic curl or assisted Nordic</span><span>3 × 5–8</span></div>
+            <div class="exercise-row"><span>Copenhagen plank</span><span>3 × 20–30 sec / side</span></div>
+            <div class="exercise-row"><span>Heavy sled push</span><span>5–6 × 20 yd</span></div>
+          </div>
+        </details>
+
+        <details class="workout" open>
+          <summary>Friday — Upper Body B</summary>
+          <div class="workout-body">
+            <div class="exercise-row"><span>Medicine-ball shot-put throw</span><span>4 × 3 / side</span></div>
+            <div class="exercise-row"><span>Landmine push press</span><span>4 × 4 / side</span></div>
+            <div class="exercise-row"><span>Incline neutral-grip dumbbell press</span><span>3 × 8</span></div>
+            <div class="exercise-row"><span>One-arm cable row</span><span>4 × 8 / side</span></div>
+            <div class="exercise-row"><span>Neutral-grip pulldown</span><span>3 × 8–10</span></div>
+            <div class="exercise-row"><span>Push-up plus</span><span>2 × 10–15</span></div>
+            <div class="exercise-row"><span>Rear-delt raise</span><span>2 × 12–15</span></div>
+            <div class="exercise-row"><span>Suitcase carry</span><span>3 × 25–30 yd / side</span></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="notice card" style="margin-top:17px;">
+        <div class="notice-icon">↗</div>
+        <div>
+          <strong>Throwing quality takes priority.</strong>
+          <p class="muted">When throwing velocity or command is the priority, throw before lifting. Do not place a demanding upper-body session immediately before a bullpen or high-intensity throwing day. A pitcher should usually use less pressing volume and coordinate the entire week with his throwing schedule.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="progression">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">How the work evolves</p>
+          <h2>Loading, progression and deloading</h2>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Phase</th><th>Main lifts</th><th>Accessories</th><th>Execution</th></tr></thead>
+          <tbody>
+            <tr><td>Baseline</td><td>2–3 sets of 8–10</td><td>2 sets</td><td>Leave about 3 reps in reserve; learn technique.</td></tr>
+            <tr><td>Hypertrophy</td><td>3–4 sets of 6–10</td><td>2–3 sets of 8–15</td><td>Mostly 2 reps in reserve; controlled, repeatable work.</td></tr>
+            <tr><td>Strength-hypertrophy</td><td>4–5 sets of 4–6</td><td>2–3 sets of 8–12</td><td>1–2 reps in reserve; preserve sprint and throw quality.</td></tr>
+            <tr><td>Maximum strength</td><td>4–5 sets of 3–5</td><td>2 sets of 8–12</td><td>No grinding repetitions; stop before technique breaks.</td></tr>
+            <tr><td>Power / preseason</td><td>3–4 sets of 3–5</td><td>Minimal</td><td>Cut volume 35–50%; move submaximal loads rapidly.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="two-col" style="margin-top:18px;">
+        <div class="card pad">
+          <h3>Double-progression rule</h3>
+          <ol style="margin:0; padding-left: 20px;">
+            <li>Select a load that allows the bottom of the rep range with two clean reps still available.</li>
+            <li>Add repetitions over subsequent sessions.</li>
+            <li>When every set reaches the top of the range with good form, add approximately 5 lb upper body or 5–10 lb lower body.</li>
+            <li>Return to the bottom of the range and repeat.</li>
+          </ol>
+        </div>
+        <div class="card pad">
+          <h3>Deload every fourth week</h3>
+          <p>Reduce working sets by roughly 40–50%. Keep the movement patterns and moderate loading, but allow fatigue to dissipate.</p>
+          <p class="muted">If fall baseball work is heavy, reduce lifting volume before reducing sleep or eliminating recovery.</p>
+        </div>
+      </div>
+
+      <div class="rule-list" style="margin-top:18px;">
+        <div class="rule"><strong>No weight change for two weeks</strong><span>Add 150–200 calories per day, primarily carbohydrate.</span></div>
+        <div class="rule"><strong>Gain exceeds 0.75 lb/week for two weeks</strong><span>Remove 150–200 calories per day.</span></div>
+        <div class="rule"><strong>Waist rises more than about 0.5 inch/month</strong><span>Reduce intake by 150–200 calories and reassess food quality.</span></div>
+        <div class="rule"><strong>Weight rises while sprint or jump performance falls</strong><span>Stop the surplus and assess fatigue, body composition and training load.</span></div>
+        <div class="rule"><strong>Weight and strength both stall</strong><span>Audit adherence, sleep, stress and recovery before adding more training.</span></div>
+      </div>
+    </section>
+
+    <section id="conditioning">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Stay athletic</p>
+          <h2>Speed, conditioning and throwing integration</h2>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card pad">
+          <h3>Speed prescription</h3>
+          <ul class="checklist">
+            <li>Two short acceleration exposures each week.</li>
+            <li>Primarily 10–30-yard sprints.</li>
+            <li>Five to ten high-quality total sprints per session.</li>
+            <li>Full recovery between efforts; do not turn speed work into conditioning.</li>
+            <li>Optional 20–30-minute easy bike or incline walk once weekly.</li>
+          </ul>
+        </div>
+        <div class="card pad">
+          <h3>Throwing integration</h3>
+          <ul class="checklist">
+            <li>Use the team or pitching coach’s throwing program.</li>
+            <li>Consolidate hard throwing and upper-body lifting when practical.</li>
+            <li>Protect true recovery days.</li>
+            <li>Do not independently add a weighted-ball velocity program.</li>
+            <li>Reduce pressing if shoulder or elbow fatigue carries into throwing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="recovery">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Adaptation happens here</p>
+          <h2>Recovery standards</h2>
+        </div>
+      </div>
+
+      <div class="recovery-grid">
+        <article class="recovery-card">
+          <span class="label">Sleep</span>
+          <strong>8+ hours</strong>
+          <small>Use a consistent sleep and wake schedule.</small>
+        </article>
+        <article class="recovery-card">
+          <span class="label">Full rest</span>
+          <strong>1 day/week</strong>
+          <small>No hard lifting, sprinting or throwing.</small>
+        </article>
+        <article class="recovery-card">
+          <span class="label">Deload</span>
+          <strong>Every 4th week</strong>
+          <small>Reduce sets by approximately 40–50%.</small>
+        </article>
+        <article class="recovery-card">
+          <span class="label">Pain rule</span>
+          <strong>Do not push through</strong>
+          <small>Sharp or persistent joint pain requires evaluation.</small>
+        </article>
+      </div>
+
+      <div class="notice card" style="margin-top:17px; border-color:#efc4c7; background:#fff2f3;">
+        <div class="notice-icon" style="background:var(--red-600);">×</div>
+        <div>
+          <strong style="color:#8c242b;">Stop and involve the athletic trainer.</strong>
+          <p class="muted">Sharp pain, altered throwing mechanics, persistent loss of velocity, nighttime shoulder pain, neurological symptoms or loss of elbow extension should not be treated as ordinary soreness.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tracking">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Scoreboard</p>
+          <h2>Track the variables that matter</h2>
+        </div>
+      </div>
+      <div class="metric-grid">
+        <article class="metric-card"><span class="label">Daily</span><strong>Body weight</strong><small>Use the seven-day rolling average.</small></article>
+        <article class="metric-card"><span class="label">Weekly</span><strong>Waist</strong><small>Same location and conditions.</small></article>
+        <article class="metric-card"><span class="label">Every 3–4 weeks</span><strong>10-yard + jump</strong><small>Confirm that added mass remains athletic.</small></article>
+        <article class="metric-card"><span class="label">Every session</span><strong>Training log</strong><small>Loads, reps, RIR, throwing and readiness.</small></article>
+      </div>
+    </section>
+
+    <section id="supplements">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Optional—not foundational</p>
+          <h2>Supplement rules for a college athlete</h2>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card pad">
+          <h3>Potentially useful</h3>
+          <ul class="checklist">
+            <li><strong>Creatine monohydrate:</strong> 3–5 g daily if approved by the school.</li>
+            <li><strong>Whey or casein:</strong> only to make the protein target easier.</li>
+            <li><strong>Electrolytes:</strong> useful for heavy sweating, heat or long sessions.</li>
+            <li><strong>Vitamin D, iron and other micronutrients:</strong> only from dietary assessment or laboratory-guided need.</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <h3>NCAA eligibility warning</h3>
+          <p>The NCAA states that there are no NCAA-approved nutritional or dietary supplements and warns that products may be contaminated with banned substances not shown on the label.</p>
+          <p><strong>Every product should be cleared through the athletic department before use.</strong></p>
+          <p>Avoid SARMs, prohormones, “test boosters,” proprietary muscle-building blends and unlabeled stimulant products.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="summary">
+      <div class="callout">
+        <h3>The protocol in one paragraph</h3>
+        <p>Begin near <strong>3,550–3,700 calories on training days</strong>, reach <strong>190–205 g of protein</strong>, gain only <strong>0.25–0.50 lb per week</strong>, lift intelligently four days per week, retain two short sprint exposures, protect throwing quality, sleep at least eight hours and transition from hypertrophy to strength to power before the spring season. The goal is to arrive around <strong>215–218 lb only if speed, power, waist and arm recovery remain favorable.</strong></p>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Evidence base</p>
+          <h2>Selected references</h2>
+        </div>
+      </div>
+      <div class="sources">
+        <ol>
+          <li><a href="https://acsm.org/resistance-training-guidelines-update-2026/" target="_blank" rel="noopener">American College of Sports Medicine: Updated Resistance Training Guidelines (2026)</a> — goal-specific guidance for strength, hypertrophy and power.</li>
+          <li><a href="https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0177-8" target="_blank" rel="noopener">International Society of Sports Nutrition Position Stand: Protein and Exercise</a> — protein requirements for exercising individuals.</li>
+          <li><a href="https://jissn.biomedcentral.com/articles/10.1186/s12970-021-00412-w" target="_blank" rel="noopener">Common Questions and Misconceptions About Creatine Supplementation</a> — evidence supporting daily creatine monohydrate dosing.</li>
+          <li><a href="https://www.ncaa.org/what-we-do/health-safety-and-performance/anti-doping-and-substance-misuse-prevention/banned-substances/" target="_blank" rel="noopener">NCAA Banned Substances and Supplement Warning</a> — eligibility and contamination guidance.</li>
+          <li><a href="https://ncaaorg.s3.amazonaws.com/ssi/performance/SSI_SleepWellnessFactSheet.pdf" target="_blank" rel="noopener">NCAA Sleep and Wellness for Collegiate Athletes</a> — eight-hour sleep recommendation.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10731065/" target="_blank" rel="noopener">Resistance-Based Training and Throwing Performance in Baseball Players</a> — systematic review.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7990992/" target="_blank" rel="noopener">Offseason Workout Recommendations for Baseball Players</a> — baseball-specific off-season training review.</li>
+        </ol>
+        <p class="muted" style="margin-top:14px;">This page is educational and is not individualized medical care, injury rehabilitation or a substitute for the athlete’s school performance and sports-medicine staff.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>2026–27 Baseball Lean-Mass Protocol</strong><br />
+    Prepared for a 21-year-old, 6′0″, 210-pound college baseball player. *Target weight is conditional, not mandatory.
+  </footer>
+
+  <script>
+    // On small screens, keep the workout cards closed by default to reduce page length.
+    if (window.matchMedia('(max-width: 650px)').matches) {
+      document.querySelectorAll('details.workout').forEach(function (item) {
+        item.removeAttribute('open');
+      });
+    }
+  </script>
+</body>
+</html>
