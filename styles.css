@@ -774,6 +774,12 @@ h1 {
   line-height: .91;
   letter-spacing: -.055em;
 }
+.hero-title-single {
+  display: block;
+  max-width: none;
+  font-size: clamp(2.8rem, 4.2vw, 3.5rem);
+  white-space: nowrap;
+}
 .hero-accent { color: #79e4d1; }
 .hero-lead {
   max-width: 680px;
@@ -1135,6 +1141,7 @@ details.workout summary { min-height: 64px; padding: 18px 20px; }
   }
   .hero-inner { grid-template-columns: 1fr; gap: 24px; }
   h1 { max-width: 100%; font-size: clamp(2.55rem, 11.5vw, 4.15rem); line-height: .94; }
+  .hero-title-single { font-size: clamp(1.45rem, 6.6vw, 3rem); white-space: nowrap; }
   .hero-lead { margin-top: 18px; font-size: .96rem; line-height: 1.55; }
   .player-strip { grid-template-columns: repeat(2,minmax(0,1fr)); padding: 13px; border-radius: 21px; }
   .profile-head { padding: 2px 2px 12px; }
@@ -1177,6 +1184,160 @@ details.workout summary { min-height: 64px; padding: 18px 20px; }
   .meal { grid-template-columns: 1fr; }
   .exercise-row { grid-template-columns: 1fr; gap: 3px; }
   .exercise-row span:last-child { text-align: left; }
+}
+
+/* Elite performance visual system — sharp, disciplined, high contrast. */
+body {
+  background:
+    linear-gradient(rgba(8, 24, 38, .035) 1px, transparent 1px),
+    #e9eef2;
+  background-size: 100% 32px;
+}
+
+.hero {
+  min-height: 420px;
+  border-bottom: 5px solid var(--red-600);
+  background:
+    linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px),
+    radial-gradient(circle at 83% 12%, rgba(255,255,255,.11), transparent 22rem),
+    linear-gradient(125deg, #03080d, #081827 58%, #0e2639);
+  background-size: 44px 44px, 44px 44px, auto, auto;
+}
+.eyebrow {
+  padding: 4px 0 4px 11px;
+  border: 0;
+  border-left: 3px solid var(--red-500);
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+}
+.eyebrow-dot { display: none; }
+.hero-title-single {
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+}
+.hero-lead { color: #aebfcd; }
+.player-strip {
+  border-color: #273c4e;
+  border-radius: 8px;
+  background: #050d14;
+  box-shadow: 14px 14px 0 rgba(213,63,76,.13);
+  backdrop-filter: none;
+}
+.profile-head { border-color: #273847; }
+.player-stat {
+  border-color: #243746;
+  border-radius: 5px;
+  background: #0a1721;
+}
+.target-stat {
+  border-color: #2f8f7d;
+  background: #0a2a27;
+}
+
+.nav-wrap {
+  border: 0;
+  background: #06131f;
+  box-shadow: none;
+}
+.nav a {
+  color: #cfdae2;
+  border-radius: 3px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.nav a:hover,
+.nav a:focus-visible { color: #fff; background: #c93642; }
+
+main { max-width: 1220px; }
+.chapter-shell {
+  border: 1px solid #cbd6de;
+  border-radius: 8px;
+  background: #f8fafb;
+  box-shadow: 0 12px 32px rgba(7,19,31,.07);
+}
+.chapter-head {
+  border-left: 6px solid var(--chapter-accent);
+  background: linear-gradient(100deg, #06131f, #0c2436);
+}
+.chapter-number {
+  border-radius: 3px;
+  color: #fff;
+  background: var(--chapter-accent);
+}
+.chapter-copy > span { color: #75ddcb; }
+.chapter-copy strong { color: #fff; }
+.chapter-copy small { color: #94a9b9; }
+.chapter-toggle {
+  color: #fff;
+  border-color: #435766;
+  border-radius: 50%;
+  background: #0d2232;
+  box-shadow: none;
+}
+.chapter-body { background: #f8fafb; }
+.chapter-body section + section { border-color: #d2dce3; }
+
+.section-kicker { color: var(--red-600); }
+h2 {
+  color: #061727;
+  font-weight: 900;
+  letter-spacing: -.045em;
+}
+h3 { color: #0b2234; }
+
+.card,
+.goal-card,
+.macro-card,
+.metric-card,
+.recovery-card,
+.phase,
+.target-tile,
+.meal,
+.rule,
+.week-board article,
+details.workout,
+.sources {
+  border-color: #cfd9e0;
+  border-radius: 5px;
+  box-shadow: none;
+}
+.goal-card,
+.macro-card,
+.metric-card,
+.recovery-card { border-top: 3px solid #153d5b; }
+.goal-card:hover,
+.macro-card:hover,
+.metric-card:hover,
+.recovery-card:hover { border-top-color: var(--red-600); }
+.goal-card .label,
+.macro-card .label,
+.metric-card .label,
+.recovery-card .label { letter-spacing: .12em; }
+
+.notice {
+  border-radius: 4px;
+  box-shadow: none;
+}
+.notice-icon { border-radius: 3px; box-shadow: none; }
+.callout { border-radius: 5px; }
+.print-btn { border-radius: 3px; text-transform: uppercase; letter-spacing: .06em; }
+.target-tile::before { width: 5px; }
+.protein-list { border-radius: 5px; }
+.day-tag { border-radius: 3px; }
+details.workout summary { background: #f3f6f8; }
+details.workout[open] summary { color: #fff; background: #0b2234; }
+.exercise-row { border-color: #d9e1e6; }
+.footer { border-top: 5px solid var(--red-600); background: #02080d; }
+
+@media (max-width: 800px) {
+  .hero { border-bottom-width: 4px; }
+  .player-strip { border-radius: 6px; box-shadow: 7px 7px 0 rgba(213,63,76,.13); }
+  .chapter-shell { border-radius: 6px; }
+  .chapter-head { border-left-width: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
