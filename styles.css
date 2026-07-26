@@ -413,17 +413,17 @@ details.workout summary {
 }
 details.workout summary::-webkit-details-marker { display: none; }
 details.workout summary::after {
-  content: "+";
-  display: grid;
-  place-items: center;
+  content: "";
   flex: 0 0 auto;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--blue-100);
-  font-size: 1.2rem;
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform .18s ease;
 }
-details.workout[open] summary::after { content: "−"; }
+details.workout[open] summary::after { transform: rotate(-135deg); }
 .workout-body { padding: 0 18px 18px; }
 .exercise-row {
   display: grid;
