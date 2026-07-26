@@ -910,6 +910,10 @@ h3 { font-size: 1.07rem; letter-spacing: -.012em; }
 .macro-card strong,
 .metric-card strong,
 .recovery-card strong { font-size: clamp(1.35rem, 2.4vw, 1.75rem); white-space: nowrap; }
+.recovery-card strong {
+  white-space: normal;
+  text-wrap: balance;
+}
 
 .notice {
   border-color: #edd7a7;
